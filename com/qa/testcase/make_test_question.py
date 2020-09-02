@@ -9,7 +9,8 @@
 """
 from selenium import webdriver
 from time import sleep
-driver = webdriver.Chrome()
+# driver = webdriver.Chrome()
+driver = webdriver.Firefox()
 
 driver.get("https://www.youxueketang.com/")
 print("已经成功打开浏览器并进入优学课堂首页")
