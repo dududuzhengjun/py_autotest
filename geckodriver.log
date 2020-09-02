@@ -1,0 +1,12 @@
+1599046684442	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/f8/p22hpy4x0vg2sb1822dcdxl40000gn/T/rust_mozprofile.MH1gXYgnnY8N"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599046687795	Marionette	INFO	Listening on port 57396
+1599046687839	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.youxueketang.com/, line 15: TypeError: document.getElementsByTagName(...)[0] is undefined
+1599046727252	Marionette	INFO	Stopped listening on port 57396
+1599046732220	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/f8/p22hpy4x0vg2sb1822dcdxl40000gn/T/rust_mozprofile.siC66iKrDtln"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599046734964	Marionette	INFO	Listening on port 57545
+1599046735043	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.youxueketang.com/, line 15: TypeError: document.getElementsByTagName(...)[0] is undefined
+1599046753979	Marionette	INFO	Stopped listening on port 57545
