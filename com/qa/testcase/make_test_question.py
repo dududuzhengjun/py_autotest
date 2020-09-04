@@ -48,15 +48,32 @@ def create_danxuan():
     driver.find_element_by_xpath( "//*[@id=\"yxpProtal\"]/div/div[1]/div[1]/div/div[2]/div[2]/div/div[1]/div/ul/li[3]").click()  # 点击进入我的资源
     sleep(3)
     driver.find_element_by_xpath("//*[@id=\"yxpExercise\"]/div/div[1]/div/div[2]/div[1]/ul/li[2]/div").click()  #点击进入我的试题
+    sleep(2)
     driver.find_element_by_xpath("//*[@id=\"yxpExercise\"]/div/div[1]/div/div[2]/div[1]/ul/li[2]/ul/li[1]").click()    # 点击进入我的试题
     sleep(2)
     driver.find_element_by_xpath("//*[@id=\"yxpExercise\"]/div/div[1]/div/div[2]/div[2]/div[2]/div/div[2]/div[1]/div[1]/div/input").send_keys("荷叶一小")   # 选择单位荷叶一小
     driver.find_element_by_xpath("//*[@id=\"yxpExercise\"]/div/div[1]/div/div[2]/div[2]/div[2]/div/div[2]/div[1]/div[2]/div/input").send_keys("小学") # 选择小学
     driver.find_element_by_xpath("//*[@id=\"yxpExercise\"]/div/div[1]/div/div[2]/div[2]/div[2]/div/div[2]/div[1]/div[3]/div[1]/input").send_keys("语文")  #选择语文
     driver.find_element_by_xpath("//*[@id=\"yxpExercise\"]/div/div[1]/div/div[2]/div[2]/div[2]/div/div[2]/div[1]/button/span").click()  #点击添加试题button
+    sleep(3)
     """选择题型-单选题"""
-    driver.find_element_by_xpath("/*[@id=\"yxpExercise\"]/div/div[1]/div/div[2]/div[2]/div[2]/div/div[2]/div[1]/div/input").send_keys("单选题")
-    driver.find_element_by_xpath("")
+    driver.find_element_by_xpath("//span[@title=\"单选题\"]").click()    # 点击单选题题型
+    driver.find_element_by_xpath("//*[@id=\"question-editor\"]/div[2]/div[1]/div[2]/div/div[1]/div/div[1]/i").click()   # 选择单选题题模
+    driver.find_element_by_xpath("//*[@id=\"yxpExercise\"]/div/div[1]/div/div[2]/div[2]/div[2]/div/div[3]/div/div[2]/div[1]/div[3]").click()
+    driver.find_element_by_xpath("//*[@id=\"yxpExercise\"]/div/div[1]/div/div[2]/div[2]/div[2]/div/div[3]/div/div[2]/div[1]/div[3]").send_keys("输入题干信息")
+    driver.find_element_by_xpath("//div[@civ=\"divA\"]").send_keys("我是选项A")
+    driver.find_element_by_xpath("//div[@civ=\"divB\"]").send_keys("我是选项B")
+    driver.find_element_by_xpath("//div[@civ=\"divC\"]").send_keys("我是选项C")
+    driver.find_element_by_xpath("//div[@civ=\"divD\"]").send_keys("我是选项D")
+    """选择正确答案为C"""
+    driver.find_element_by_xpath("//input[@value=\"C\"]").click()
+
+    driver.find_element_by_xpath("//div[@tips=\"请编辑提示内容\"]").send_keys("提示内容")
+    driver.find_element_by_xpath("//div[@tips=\"请编辑解析内容\"]").send_keys("解析内容")
+    driver.find_element_by_xpath("//div[@tips=\"请编辑点评内容\"]").send_keys("点评内容")
+
+    driver.find_element_by_xpath("//i[@class=\"editsave\"]").click()
+
 
 
 login()
